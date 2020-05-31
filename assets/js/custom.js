@@ -37,11 +37,28 @@ jQuery(function($){
     }
   });
 
-  console.log("hi")
-
   /* ----------------------------------------------------------- */
   /*  3. MENU SLIDER
   /* ----------------------------------------------------------- */
+  function change_word(){
+    if (window.innerWidth < 667) {
+      $('#tab-button-2').html('木');
+      $('#tab-button-3').html('金');
+      $('#tab-button-4').html('土');
+      $('#tab-button-5').html('日');
+    }else{
+      $('#tab-button-2').html('木曜');
+      $('#tab-button-3').html('金曜');
+      $('#tab-button-4').html('土曜');
+      $('#tab-button-5').html('日曜');
+    }
+  }
+
+  change_word();
+
+  $(window).resize(function () {
+    change_word();
+  });
 
   $('#tab-button-1').click(function(){
     page_num = 1;
@@ -76,9 +93,9 @@ jQuery(function($){
       currentSlide.hide(500).removeClass('active');
       nextSlide.show(500).addClass('active');
     }else if(page_num!=5){
-      document.getElementById('tab-button-'+(page_num+1)).click();
+      $('#tab-button-'+(page_num+1)).click();
     }else{
-      document.getElementById('tab-button-1').click();
+      $('#tab-button-1').click();
     }
   });
   $('#left-arrow').click(function(){
@@ -89,9 +106,9 @@ jQuery(function($){
       currentSlide.hide(500).removeClass('active');
       prevSlide.show(500).addClass('active');
     }else if(page_num!=1){
-      document.getElementById('tab-button-'+(page_num-1)).click();
+      $('#tab-button-'+(page_num-1)).click();
     }else{
-      document.getElementById('tab-button-5').click();
+      $('#tab-button-5').click();
     }
   });
 
