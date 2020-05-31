@@ -737,14 +737,6 @@ img {
   background-color: #FFF;
 }
 
-#mu-restaurant-menu .computer {
-  display: block;
-}
-
-#mu-restaurant-menu .mobile {
-  display: none;
-}
-
 .mu-tab-content-area {
   display: inline;
   float: left;
@@ -1357,16 +1349,6 @@ img {
 
 }
 
-@media (max-width: 666px) {
-  #mu-restaurant-menu .computer {
-    display: none;
-  }
-  
-  #mu-restaurant-menu .mobile {
-    display: block;
-  }
-}
-
 @media (max-width: 640px) {
   
   .navbar-default .navbar-toggle:hover, 
@@ -1537,11 +1519,11 @@ img {
   }
   #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu #left-arrow{
     top: -60px;
-    right: -45px;
+    right: -40px;
   }
   #mu-restaurant-menu .mu-restaurant-menu-area .mu-restaurant-menu-content .mu-restaurant-menu #right-arrow{
     top: -60px;
-    left: -45px;
+    left: -40px;
   }
 }
 
